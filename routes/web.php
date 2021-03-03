@@ -20,4 +20,5 @@ Route::get('/', function () {
     return view('welcome',compact('files'));
 });
 
+Route::get('/download-files/{id}',[FileController::class, 'download']);
 Route::resource('files', FileController::class);
